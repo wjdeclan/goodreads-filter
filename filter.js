@@ -1,3 +1,5 @@
+var filteredAuthors = ["###"];
+
 //get all spans with attribute itemprop="name"
 let spanList = document.querySelectorAll("span[itemprop=\"name\"]");
 
@@ -5,7 +7,8 @@ let spanList = document.querySelectorAll("span[itemprop=\"name\"]");
 for (let name of spanList) {
 
 	//if their content matches a given name
-	if (name.textContent == "###") {
+	if (filteredAuthors.indexOf(name.textContent) != -1) {
+
 		//find parent
 		let p = name.parentElement;
 
