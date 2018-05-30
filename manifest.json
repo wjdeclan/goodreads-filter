@@ -1,0 +1,16 @@
+{
+
+  "manifest_version": 2,
+  "name": "Goodreads Filter",
+  "version": "1.0",
+
+  "description": "Filters authors from lists on goodreads.com.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.goodreads.com/list/show/*"],
+      "js": ["filter.js"]
+    }
+  ]
+
+}
