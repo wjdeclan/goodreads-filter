@@ -11,6 +11,8 @@
       "matches": ["*://*.goodreads.com/list/show/*"],
       "js": ["filter.js"]
     }
-  ]
+  ],
+
+  "permissions": ["storage"]
 
 }
