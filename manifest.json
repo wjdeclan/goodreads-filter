@@ -10,6 +10,10 @@
     {
       "matches": ["*://*.goodreads.com/list/show/*"],
       "js": ["filter.js"]
+    },
+    {
+      "matches": ["*://*.goodreads.com/author/show/*"],
+      "js": ["author.js"]
     }
   ],
 
