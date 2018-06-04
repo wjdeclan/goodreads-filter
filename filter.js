@@ -1,5 +1,8 @@
 function onGot(item) {
-  authorArray = item["goodreads-filter"].split(",");
+  let authorArray = [];
+  if ("goodreads-filter" in item) {
+    authorArray = item["goodreads-filter"].split(",");
+  }
 
 	//get all spans with attribute itemprop="name"
 	let spanList = document.querySelectorAll("span[itemprop=\"name\"]");
