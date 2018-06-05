@@ -17,16 +17,20 @@ function onGot(item) {
 
   let btn = document.querySelector("#block-button");
 
-  btn.addEventListener("click", function() { btnClick(btn); });
+  btn.addEventListener("click", function() { btnClick(btn, authorArray, name); });
 }
 
-function btnClick(btn) {
+function btnClick(btn, authorArray, name) {
   console.log("click");
 
   if (btn.textContent === 'Block Author') {
     btn.textContent = 'Unblock Author';
+    authorArray.splice(authorArray.length, 0, name);
+    browser.storage.local.set({"goodreads-filter": authorArray.join(",")});
   } else {
     btn.textContent = 'Block Author';
+    authorArray.splice(authorArray.indexOf(name), 1);
+    browser.storage.local.set({"goodreads-filter": authorArray.join(",")});
   }
 }
 
